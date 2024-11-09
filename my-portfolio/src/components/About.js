@@ -1,9 +1,9 @@
-import './About.css';
+import '../stylesheets/About.css';
 import aboutPageImage from '../assets/About_Page_Image.png';
-
+import {motion} from 'framer-motion';
 function AboutSection(){
     return (
-        <div className="profile-container">
+        <motion.div className="profile-container" initial = {{opacity:0}} animate = {{opacity:1}} exit = {{opacity:0, transition:{duration:0.2}}}>
             <h1>About</h1>
             <p className="profile-text">
                 I’m a tech professional with a Computer Science background and two years of web development experience at Cognizant.
@@ -20,7 +20,7 @@ function AboutSection(){
             <div className = "aboutImage">
                 <img src={aboutPageImage} alt='Unable to connect!!'/>
             </div>
-        </div>
+        </motion.div>
     );
 }
 export default AboutSection;

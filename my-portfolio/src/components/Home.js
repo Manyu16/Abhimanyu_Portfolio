@@ -1,8 +1,8 @@
-import './Home.css';
+import '../stylesheets/Home.css';
 import Modal from 'react-modal';
 import React, { useState } from 'react';
 import homePageImage from '../assets/Home_Page_3.png';
-
+import {motion} from 'framer-motion';
 function HomeSection() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -10,8 +10,8 @@ function HomeSection() {
     const openModal = () => setModalIsOpen(true);
     const closeModal = () => setModalIsOpen(false);
   return (
-    <div className = "HomePage">
-        <img src={homePageImage} alt='Unable to load!!'></img>
+    <motion.div className = "HomePage" initial = {{opacity:0}} animate = {{opacity:1}} exit = {{opacity:0, transition:{duration:0.1}}}>
+        <img src={homePageImage} alt='Unable to load!!'/>
         <div className="Introduction">
             <p id = "greetings">Hey there, </p>
             <p id = "Myname">I'm<br/>Abhimanyu</p>
@@ -44,7 +44,7 @@ function HomeSection() {
                     <button onClick={closeModal} className="close-button">Close</button>
                 </Modal>
         </div>
-    </div>
+    </motion.div>
     
   );
 }

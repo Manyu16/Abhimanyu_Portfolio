@@ -1,8 +1,8 @@
 import React from 'react';
-import './Navbar.css';
+import '../stylesheets/Navbar.css';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function NavigationBar() {
   return (

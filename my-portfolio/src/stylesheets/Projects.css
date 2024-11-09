@@ -2,6 +2,7 @@ h1{
     position: relative;
     text-align: center;
     font-size: 38pt;
+    animation: fadeIn 5s ease forwards;
 }
 
 #project_title{
@@ -22,7 +23,7 @@ h1{
     text-align: justify;
 }
 .ProjectsPage img{
-    z-index: 1;
+    z-index: -1;
     position: absolute;
     top: 550px;
     left: 600px;
@@ -46,3 +47,12 @@ h1{
     left: 500px;
     z-index: 2;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

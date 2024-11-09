@@ -1,8 +1,9 @@
-import './Skills.css';
+import '../stylesheets/Skills.css';
+import {motion} from 'framer-motion';
 import skillSectionImage from '../assets/Skills_Page_Image.png';
 function SkillsSection(){
     return (
-        <div className = "SkillsPage">
+        <motion.div className = "SkillsPage" initial = {{opacity:0}} animate = {{opacity:1}} exit = {{opacity:0, transition:{duration:0.2}}}>
             <h1>Skills</h1>
             <img src = {skillSectionImage} alt = 'Unable to connect'></img>
             <div className = "skill_1">
@@ -17,7 +18,7 @@ function SkillsSection(){
                 <p id = "skill_title">User-Centered Design</p>
                 <p className = "skill_body">Focused on creating intuitive, user-friendly interfaces using ReactJS and responsive design principles, delivering seamless user experiences. Skilled in front-end development, crafting dynamic, visually appealing components, and enhancing functionality for projects, including immersive mapping applications​</p>
             </div>
-        </div>
+        </motion.div>
     );
 }
 export default SkillsSection;
